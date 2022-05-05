@@ -1,0 +1,59 @@
+.middle-container {
+  margin: 0 25px;
+}
+.profile {
+  height: 410px;
+}
+.block {
+  margin-bottom: 25px;
+  background: #394264;
+  border-radius: 5px;
+}
+.center-date span.scnd-font-color {
+  line-height: 0;
+}
+.profile-picture {
+  border-radius: 100%;
+  overflow: hidden;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+.big-profile-picture {
+  margin: 0 auto;
+  border: 5px solid #50597b;
+  width: 150px;
+  height: 150px;
+}
+.user-name {
+  text-align: center;
+}
+.profile-description {
+  width: 210px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.btn-file {
+  position: relative;
+  overflow: hidden;
+}
+.btn-file input[type=file] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+  font-size: 100px;
+  text-align: right;
+  filter: alpha(opacity=0);
+  opacity: 0;
+  outline: none;
+  background: white;
+  cursor: inherit;
+  display: block;
+}
+.text-config{
+  font-style: normal;
+  font-family: 'Lato', sans-serif;
+}

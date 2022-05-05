@@ -1,0 +1,6 @@
+<li class="bg-dark list-group-item d-flex alert-items-center justify-content-between user_list_item">
+  <div>
+    <%= link_to image_tag(user.avatar, class:"rounded bg-dark ", style:"width: 32px; height: 32px;"), user %>
+  </div>
+  <%= link_to user.username, user, class:'ms-2 me-auto username post_link', data: {turbo: "false"} %>
+</li>

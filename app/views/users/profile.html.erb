@@ -1,0 +1,58 @@
+<%= stylesheet_link_tag "profile", "data-turbo-track": "reload" %>
+
+<div class="profile block pt-5">
+  <div class="profile-picture big-profile-picture clear">
+    <%= image_tag(@user.avatar_thumbnail) %>
+  </div>
+  <h1 class="user-name"><%= @user.first_name %> <%= @user.last_name %> </h1>
+  <h5 class="user-name text-primary">@<%= @user.username %></h5>
+  <div class="profile-description">
+    <p class="scnd-font-color">
+      <%if @user == current_user %>
+      <div class="d-flex justify-content-center" >
+        <%= link_to edit_user_registration_path, class:"follow post_link px-2" do %>
+          <span>Edit profile</span>
+        <% end %>
+      </div>
+    <%end %>
+    <p class="scnd-font-color">
+      <%if @user != current_user %>
+        <% if current_user.friends.size != 0  %>
+          <% if @friend_checker %>
+          <div class="d-flex justify-content-center" >
+            <%= button_to add_friend_path(friend: {friend: @user.id}), method: :post, class:"follow" do %>
+              <span>Add to friends</span>
+            <% end %>
+          </div>
+        <% else %>
+          <div class="d-flex justify-content-center" >
+            <%= button_to @current_friend, method: :delete, class: 'follow' do%>
+              <span>Unfollow</span>
+            <% end %>
+          </div>
+        <% end %>
+      <% else %>
+        <div class="d-flex justify-content-center" >
+          <%= button_to add_friend_path(friend: {friend: @user.id}), method: :post, class:"follow" do %>
+            <span>Add to friends</span>
+          <% end %>
+        </div>
+      <%end %>
+    <%end %>
+  </div>
+</div>
+
+<div class="container">
+  <% @user.posts.order(created_at: :desc).each do |post| %>
+    <%= render post %>
+  <% end %>
+  <% if @user == current_user %>
+    <div class="pb-4 pr-4" style="display: flex; position: fixed;  bottom: 0;  right: 0;">
+      <form class="button_to" method="get" action="/posts/new">
+        <button class="button-plus" type="submit">
+          <i class="fa fa-plus"></i>
+        </button>
+      </form>
+    </div>
+  <%end %>
+</div>

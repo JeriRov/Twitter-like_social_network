@@ -1,0 +1,21 @@
+<div class="link my-3 p-3 bg-dark rounded shadow-sm">
+  <header class="d-flex text-muted">
+    <a href="/u/<%= post.user.id%>"><%=image_tag post.user.avatar, alt:"32x32", class:"rounded flex-shrink-0 me-2 bd-placeholder-img", style:"width: 32px; height: 32px;"%></a>
+    <p class="pb-1 mb-0 small lh-sm">
+      <%=link_to user_profile_path(post.user), class:"post_link d-flex" do %>
+        <strong class="text-gray-dark">
+          <%= post.user.first_name%> <%= post.user.last_name%>
+        </strong>
+        <span class="text-muted small text_post_username">@<%= post.user.username %></span>
+      <% end %>
+      <%= post.created_at.to_s.gsub! '-', '.' %>
+    </p>
+  </header>
+  <%if current_page?(home_path) or current_page?(user_profile_path) %>
+    <a href="/posts/<%=post.id %>" class="post_link container">
+      <%= post.body %>
+    </a>
+  <% else %>
+    <%= post.body %>
+  <%end %>
+</div>

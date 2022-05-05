@@ -1,0 +1,74 @@
+W, [2022-05-05T19:47:54.271626 #30696]  WARN -- : You are running SQLite in production, this is generally not recommended. You can disable this warning by setting "config.active_record.sqlite3_production_warning=false".
+W, [2022-05-05T19:59:38.058986 #12532]  WARN -- : You are running SQLite in production, this is generally not recommended. You can disable this warning by setting "config.active_record.sqlite3_production_warning=false".
+I, [2022-05-05T20:09:02.311878 #12532]  INFO -- : [98850083-61cb-4681-8a1d-52716bcfe077] Started GET "/users/edit" for 127.0.0.1 at 2022-05-05 20:09:02 +0300
+I, [2022-05-05T20:09:02.319292 #12532]  INFO -- : [98850083-61cb-4681-8a1d-52716bcfe077] Processing by Auth::RegistrationsController#edit as HTML
+I, [2022-05-05T20:09:02.323014 #12532]  INFO -- : [98850083-61cb-4681-8a1d-52716bcfe077] Completed 401 Unauthorized in 3ms (Allocations: 1250)
+I, [2022-05-05T20:09:02.355405 #12532]  INFO -- : [33b7cbac-b4da-4beb-958f-6e0a09f748ab] Started GET "/users/sign_in" for 127.0.0.1 at 2022-05-05 20:09:02 +0300
+I, [2022-05-05T20:09:02.356155 #12532]  INFO -- : [33b7cbac-b4da-4beb-958f-6e0a09f748ab] Processing by Auth::SessionsController#new as HTML
+I, [2022-05-05T20:09:02.375360 #12532]  INFO -- : [33b7cbac-b4da-4beb-958f-6e0a09f748ab] Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.5ms | Allocations: 1921)
+F, [2022-05-05T20:09:02.375808 #12532] FATAL -- : [33b7cbac-b4da-4beb-958f-6e0a09f748ab]   
+[33b7cbac-b4da-4beb-958f-6e0a09f748ab] ActiveRecord::StatementInvalid (Could not find table 'users'):
+[33b7cbac-b4da-4beb-958f-6e0a09f748ab]   
+[33b7cbac-b4da-4beb-958f-6e0a09f748ab] app/controllers/Auth/sessions_controller.rb:10:in `new'
+I, [2022-05-05T20:09:11.592029 #12532]  INFO -- : [fa8dd8a6-a67f-4827-9353-a31644a1d16c] Started GET "/" for 127.0.0.1 at 2022-05-05 20:09:11 +0300
+I, [2022-05-05T20:09:11.593260 #12532]  INFO -- : [fa8dd8a6-a67f-4827-9353-a31644a1d16c] Processing by PagesController#index as HTML
+I, [2022-05-05T20:09:11.595611 #12532]  INFO -- : [fa8dd8a6-a67f-4827-9353-a31644a1d16c] Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms | Allocations: 1058)
+I, [2022-05-05T20:09:11.654837 #12532]  INFO -- : [0bb5c4d9-8b67-47d0-a080-c434468a70eb] Started GET "/users/sign_in" for 127.0.0.1 at 2022-05-05 20:09:11 +0300
+I, [2022-05-05T20:09:11.655618 #12532]  INFO -- : [0bb5c4d9-8b67-47d0-a080-c434468a70eb] Processing by Auth::SessionsController#new as HTML
+I, [2022-05-05T20:09:11.656743 #12532]  INFO -- : [0bb5c4d9-8b67-47d0-a080-c434468a70eb] Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.2ms | Allocations: 619)
+F, [2022-05-05T20:09:11.657127 #12532] FATAL -- : [0bb5c4d9-8b67-47d0-a080-c434468a70eb]   
+[0bb5c4d9-8b67-47d0-a080-c434468a70eb] ActiveRecord::StatementInvalid (Could not find table 'users'):
+[0bb5c4d9-8b67-47d0-a080-c434468a70eb]   
+[0bb5c4d9-8b67-47d0-a080-c434468a70eb] app/controllers/Auth/sessions_controller.rb:10:in `new'
+I, [2022-05-05T20:09:13.585494 #12532]  INFO -- : [e3bb5b86-3366-4da6-b137-b92d212b72ef] Started GET "/users/sign_in" for 127.0.0.1 at 2022-05-05 20:09:13 +0300
+I, [2022-05-05T20:09:13.586204 #12532]  INFO -- : [e3bb5b86-3366-4da6-b137-b92d212b72ef] Processing by Auth::SessionsController#new as HTML
+I, [2022-05-05T20:09:13.587514 #12532]  INFO -- : [e3bb5b86-3366-4da6-b137-b92d212b72ef] Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.2ms | Allocations: 592)
+F, [2022-05-05T20:09:13.587905 #12532] FATAL -- : [e3bb5b86-3366-4da6-b137-b92d212b72ef]   
+[e3bb5b86-3366-4da6-b137-b92d212b72ef] ActiveRecord::StatementInvalid (Could not find table 'users'):
+[e3bb5b86-3366-4da6-b137-b92d212b72ef]   
+[e3bb5b86-3366-4da6-b137-b92d212b72ef] app/controllers/Auth/sessions_controller.rb:10:in `new'
+I, [2022-05-05T20:09:14.398411 #12532]  INFO -- : [3c75d979-4139-4403-ba34-79bd1af7b8d5] Started GET "/users/sign_in" for 127.0.0.1 at 2022-05-05 20:09:14 +0300
+I, [2022-05-05T20:09:14.399447 #12532]  INFO -- : [3c75d979-4139-4403-ba34-79bd1af7b8d5] Processing by Auth::SessionsController#new as HTML
+I, [2022-05-05T20:09:14.400481 #12532]  INFO -- : [3c75d979-4139-4403-ba34-79bd1af7b8d5] Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.2ms | Allocations: 592)
+F, [2022-05-05T20:09:14.400887 #12532] FATAL -- : [3c75d979-4139-4403-ba34-79bd1af7b8d5]   
+[3c75d979-4139-4403-ba34-79bd1af7b8d5] ActiveRecord::StatementInvalid (Could not find table 'users'):
+[3c75d979-4139-4403-ba34-79bd1af7b8d5]   
+[3c75d979-4139-4403-ba34-79bd1af7b8d5] app/controllers/Auth/sessions_controller.rb:10:in `new'
+W, [2022-05-05T20:09:46.678934 #32816]  WARN -- : You are running SQLite in production, this is generally not recommended. You can disable this warning by setting "config.active_record.sqlite3_production_warning=false".
+I, [2022-05-05T20:09:50.008040 #32816]  INFO -- : [f475019a-0cd8-4036-bcdf-dd0ba4e5dd84] Started GET "/" for 127.0.0.1 at 2022-05-05 20:09:50 +0300
+I, [2022-05-05T20:09:50.009804 #32816]  INFO -- : [f475019a-0cd8-4036-bcdf-dd0ba4e5dd84] Processing by PagesController#index as HTML
+I, [2022-05-05T20:09:50.013454 #32816]  INFO -- : [f475019a-0cd8-4036-bcdf-dd0ba4e5dd84] Completed 401 Unauthorized in 4ms (Allocations: 1363)
+I, [2022-05-05T20:09:50.068258 #32816]  INFO -- : [c2036406-8075-4539-9288-7eea7a284acc] Started GET "/users/sign_in" for 127.0.0.1 at 2022-05-05 20:09:50 +0300
+I, [2022-05-05T20:09:50.069122 #32816]  INFO -- : [c2036406-8075-4539-9288-7eea7a284acc] Processing by Auth::SessionsController#new as HTML
+I, [2022-05-05T20:09:50.074123 #32816]  INFO -- : [c2036406-8075-4539-9288-7eea7a284acc] Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.5ms | Allocations: 1982)
+F, [2022-05-05T20:09:50.074558 #32816] FATAL -- : [c2036406-8075-4539-9288-7eea7a284acc]   
+[c2036406-8075-4539-9288-7eea7a284acc] ActiveRecord::StatementInvalid (Could not find table 'users'):
+[c2036406-8075-4539-9288-7eea7a284acc]   
+[c2036406-8075-4539-9288-7eea7a284acc] app/controllers/Auth/sessions_controller.rb:10:in `new'
+I, [2022-05-05T20:09:51.804474 #32816]  INFO -- : [829350b7-b642-442c-8067-24c48a19299e] Started GET "/users/sign_in" for 127.0.0.1 at 2022-05-05 20:09:51 +0300
+I, [2022-05-05T20:09:51.805191 #32816]  INFO -- : [829350b7-b642-442c-8067-24c48a19299e] Processing by Auth::SessionsController#new as HTML
+I, [2022-05-05T20:09:51.806276 #32816]  INFO -- : [829350b7-b642-442c-8067-24c48a19299e] Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.1ms | Allocations: 683)
+F, [2022-05-05T20:09:51.806636 #32816] FATAL -- : [829350b7-b642-442c-8067-24c48a19299e]   
+[829350b7-b642-442c-8067-24c48a19299e] ActiveRecord::StatementInvalid (Could not find table 'users'):
+[829350b7-b642-442c-8067-24c48a19299e]   
+[829350b7-b642-442c-8067-24c48a19299e] app/controllers/Auth/sessions_controller.rb:10:in `new'
+I, [2022-05-05T20:09:53.757706 #32816]  INFO -- : [f0ff390f-c15b-4707-800a-d01f540fb28d] Started GET "/" for 127.0.0.1 at 2022-05-05 20:09:53 +0300
+I, [2022-05-05T20:09:53.758257 #32816]  INFO -- : [f0ff390f-c15b-4707-800a-d01f540fb28d] Processing by PagesController#index as HTML
+I, [2022-05-05T20:09:53.758805 #32816]  INFO -- : [f0ff390f-c15b-4707-800a-d01f540fb28d] Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms | Allocations: 401)
+I, [2022-05-05T20:09:53.773544 #32816]  INFO -- : [26beb867-e5df-44d5-b4a1-f17a337237f9] Started GET "/users/sign_in" for 127.0.0.1 at 2022-05-05 20:09:53 +0300
+I, [2022-05-05T20:09:53.774275 #32816]  INFO -- : [26beb867-e5df-44d5-b4a1-f17a337237f9] Processing by Auth::SessionsController#new as HTML
+I, [2022-05-05T20:09:53.775611 #32816]  INFO -- : [26beb867-e5df-44d5-b4a1-f17a337237f9] Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.2ms | Allocations: 600)
+F, [2022-05-05T20:09:53.776017 #32816] FATAL -- : [26beb867-e5df-44d5-b4a1-f17a337237f9]   
+[26beb867-e5df-44d5-b4a1-f17a337237f9] ActiveRecord::StatementInvalid (Could not find table 'users'):
+[26beb867-e5df-44d5-b4a1-f17a337237f9]   
+[26beb867-e5df-44d5-b4a1-f17a337237f9] app/controllers/Auth/sessions_controller.rb:10:in `new'
+I, [2022-05-05T20:11:01.339601 #32816]  INFO -- : [da9f3588-0a3e-4d37-a390-6986234b7b48] Started GET "/" for 127.0.0.1 at 2022-05-05 20:11:01 +0300
+I, [2022-05-05T20:11:01.340518 #32816]  INFO -- : [da9f3588-0a3e-4d37-a390-6986234b7b48] Processing by PagesController#index as HTML
+I, [2022-05-05T20:11:01.341135 #32816]  INFO -- : [da9f3588-0a3e-4d37-a390-6986234b7b48] Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms | Allocations: 401)
+I, [2022-05-05T20:11:01.355401 #32816]  INFO -- : [0b96cda1-6186-4529-8aa9-d86d797e7407] Started GET "/users/sign_in" for 127.0.0.1 at 2022-05-05 20:11:01 +0300
+I, [2022-05-05T20:11:01.356084 #32816]  INFO -- : [0b96cda1-6186-4529-8aa9-d86d797e7407] Processing by Auth::SessionsController#new as HTML
+I, [2022-05-05T20:11:01.357278 #32816]  INFO -- : [0b96cda1-6186-4529-8aa9-d86d797e7407] Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.2ms | Allocations: 609)
+F, [2022-05-05T20:11:01.357663 #32816] FATAL -- : [0b96cda1-6186-4529-8aa9-d86d797e7407]   
+[0b96cda1-6186-4529-8aa9-d86d797e7407] ActiveRecord::StatementInvalid (Could not find table 'users'):
+[0b96cda1-6186-4529-8aa9-d86d797e7407]   
+[0b96cda1-6186-4529-8aa9-d86d797e7407] app/controllers/Auth/sessions_controller.rb:10:in `new'

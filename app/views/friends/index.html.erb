@@ -1,0 +1,22 @@
+<%= stylesheet_link_tag "friends", "data-turbo-track": "reload" %>
+
+<div class="profile-container container">
+  <h4>Friends (<%= @friends.size %>)</h4>
+  <div class="container">
+    <%if @friends.empty? %>
+      <h5>You have no friends.</h5>
+    <% else %>
+      <% @friends.each do |friend| %>
+        <% if friend.user == current_user %>
+          <div id="friends">
+            <ul class="friend-list">
+              <li>
+                <%= render friend %>
+              </li>
+            </ul>
+          </div>
+        <% end %>
+      <% end %>
+    <% end %>
+  </div>
+</div>

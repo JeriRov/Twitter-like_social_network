@@ -1,0 +1,12 @@
+<div class="comment-<%=comment.id %> container bg-comment p-3 mt-3" style="border:1px solid black;">
+  <%= comment.user.username %>
+  <%if current_user == comment.user %>
+    <div class="button-group float-end">
+      <%= button_to "Delete", [post, comment], class:"btn btn-danger", method: :delete%>
+    </div>
+  <% end %>
+  <br/>
+  <span class="small">Posted <%=time_ago_in_words(comment.created_at) %></span>
+  <hr class="m-0"/>
+  <%= comment.body %>
+</div>

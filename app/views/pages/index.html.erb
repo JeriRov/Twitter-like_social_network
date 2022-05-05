@@ -1,0 +1,56 @@
+<main role="main" class="container">
+  <div class="row">
+    <div class="col-md-8 blog-main">
+
+      <% @friend_posts.each do |post| %>
+          <%= render post %>
+      <% end %>
+
+      <div class="pb-4 pr-4" style="display: flex; position: fixed;  bottom: 0;  right: 0;">
+        <form class="button_to" method="get" action="/posts/new">
+          <button class="button-plus" type="submit">
+            <i class="fa fa-plus"></i>
+          </button>
+        </form>
+      </div>
+      <nav class="blog-pagination">
+        <%= button_to home_path, class:"newer", method: :get do %>Newer<span class="newer_s"></span><% end %>
+      </nav>
+
+    </div><!-- /.blog-main -->
+
+    <aside class="col-md-4 blog-sidebar">
+
+      <div class="pb-3 pl-3 pr-3">
+        <div class="my-3 p-3 bg-dark rounded shadow-sm">
+          <h6 class="border-bottom pb-2 mb-0">Suggestions</h6>
+          <% if @suggestions.size > 0 %>
+            <%@suggestions[0..20].each do |user| %>
+              <% if user != current_user%>
+                <div class="d-flex text-muted pt-3">
+                  <a href="u/<%= user.id %>" class="avatar"><%=image_tag user.avatar, alt:"32x32", class:"rounded flex-shrink-0 me-2 bd-placeholder-img", style:"width: 32px; height: 32px;"%></a>
+                  <div class="p-1 pt-0 mb-0 small lh-sm w-100 d-flex flex-row justify-content-between">
+
+                    <div class="d-flex flex-column">
+                      <a href="u/<%= user.id %>" class="post_link">
+                      <strong class="text-gray-dark"><%= user.first_name %> <%= user.last_name %></strong>
+                      <span class="d-block text-muted">@<%= user.username%> </span>
+                      </a>
+                    </div>
+                    <div class="small lh-sm pt-1">
+                      <%= button_to add_friend_path(friend: {friend: user.id}), method: :post, class:"follow" do %>
+                        <span>Follow</span>
+                      <% end %>
+                    </div>
+                  </div>
+                </div>
+              <% end %>
+            <% end %>
+          <% else %>
+            No suggestions yet!
+          <% end %>
+        </div>
+      </div>
+    </aside><!-- /.blog-sidebar -->
+  </div><!-- /.row -->
+</main>
