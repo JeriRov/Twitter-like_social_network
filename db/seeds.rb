@@ -6,8 +6,8 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-User.create(email: "abc@gmail.com", password: "password", password_confirmation: "password", username: 'Saske_Uchiha',first_name: "Sasuke", last_name: "Uchiha" )
-User.create(email: "abcd@gmail.com", password: "password", password_confirmation: "password", username: 'Madara_Uchiha', first_name: "Madara", last_name: "Uchiha")
+User.create(email: "abc@gmail.com", password: "password", password_confirmation: "password", username: 'Young_Dimon',first_name: "Dmitry", last_name: "Molod" )
+User.create(email: "abcd@gmail.com", password: "password", password_confirmation: "password", username: 'Oleg_Asagi', first_name: "Oleg", last_name: "Samurai")
 
 5.times do |x|
   Post.create(body: "Body #{x} Some words for test case for db", user_id: User.first.id)
